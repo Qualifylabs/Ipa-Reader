@@ -6,7 +6,7 @@ module IpaReader
     def self.normalize_png(oldPNG)
       pngheader = "\x89PNG\r\n\x1a\n"
 
-      if oldPNG[0...8] != pngheader
+      if oldPNG[0...8].bytes != pngheader.bytes
         return nil
       end
     
