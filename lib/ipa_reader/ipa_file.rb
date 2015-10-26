@@ -13,7 +13,7 @@ module IpaReader
       info_plist_file = nil
       regex = /Payload\/[^\/]+.app\/Info.plist/
       Zip::ZipFile.foreach(file_path) { |f| info_plist_file = f if f.name.match(regex) }
-      cf_plist = CFPropertyList::List.new(:data => self.read_file(regex), :format => CFPropertyList::List::FORMAT_BINARY)
+      cf_plist = CFPropertyList::List.new(:data => self.read_file(regex), :format => CFPropertyList::List::FORMAT_AUTO)
       self.plist = cf_plist.value.to_rb
     end
     
