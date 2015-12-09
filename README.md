@@ -1,3 +1,12 @@
+
+# Change History
+
+*09.12.2015*
+* ipa_file.rb - added additional path to find application icon 
+*26.10.2015*
+* ipa_file.rb - changed CFPropertyList format to auto recognition (our ipa files can be binary and plain)
+
+
 # ipa_reader
 
 by [Nicholas Schlueter](http://twitter.com/schlu)
